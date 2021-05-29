@@ -4,8 +4,6 @@ import {
   Heading,
   FormLabel,
   FormControl,
-  FormErrorMessage,
-  FormHelperText,
   Button,
   Input,
   useColorMode,
@@ -13,7 +11,6 @@ import {
   IconButton,
 } from "@chakra-ui/react";
 import { FaMoon, FaSun } from "react-icons/fa";
-import { FormEvent, BaseSyntheticEvent} from "react";
 import { AlertPop } from "../components/Alert";
 
 type LoginFormData = {
@@ -28,7 +25,7 @@ export default function LoginForm() {
     register,
     handleSubmit,
     reset,
-    formState: { errors, isSubmitting, isSubmitSuccessful },
+    formState: { errors, isSubmitting },
   } = useForm<LoginFormData>();
 
     const onSubmit: SubmitHandler<LoginFormData> = (data) => {
@@ -36,9 +33,6 @@ console.log(data);
 reset({})
     }
 
-// useEffect(() => {
-
-// },[])
 
 
   return (
@@ -80,7 +74,6 @@ reset({})
                   },
                 })}
               />
-              {/* {console.log(errors.email)} */}
 
               {errors.email && <AlertPop formError={errors.email.message} />}
             </FormControl>
@@ -102,7 +95,6 @@ reset({})
                   },
                 })}
               />
-              {/* {console.log(errors.password)} */}
 
               {errors.password && (
                 <AlertPop formError={errors.password.message} />
