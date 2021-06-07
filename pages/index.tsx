@@ -16,6 +16,7 @@ import { AlertPop } from "../components/Alert";
 type LoginFormData = {
   email: string;
   password: string;
+  
 };
 
 export default function LoginForm() {
@@ -27,6 +28,7 @@ export default function LoginForm() {
     reset,
     formState: { errors, isSubmitting },
   } = useForm<LoginFormData>();
+
 
     const onSubmit: SubmitHandler<LoginFormData> = (data) => {
 console.log(data);
