@@ -5,9 +5,10 @@ import { FieldErrors } from "react-hook-form";
 
 export const AlertPop = (props: FieldErrors) => {
   return <div>
-<Alert status="error">
+<Alert status="error" p="2" rounded="md" >
     <AlertIcon />
-    <AlertTitle mr={2}>{props.formError}</AlertTitle>
+    <AlertTitle mr={2}
+    fontSize="sm">{props.formError}</AlertTitle>
 </Alert>
 
   </div>;

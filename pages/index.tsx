@@ -68,6 +68,7 @@ reset({})
                 placeholder="Email"
                 variant="filled"
                 mb={6}
+        w="15rem"
                 {...register("email", {
                   required: "Email is required",
                   pattern: {
@@ -89,6 +90,7 @@ reset({})
                 placeholder="Password"
                 variant="filled"
                 mb={6}
+                w="15rem"
                 {...register("password", {
                   required: "Password is required",
                   minLength: {
